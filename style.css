@@ -1,3 +1,12 @@
 body {
-  background-color: blue;
+  display: flex;
+  background-color: hsl(221, 100%, 96%);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.Head-wrapper {
+  font-size: larger;
 }
