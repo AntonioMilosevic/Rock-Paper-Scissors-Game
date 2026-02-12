@@ -55,6 +55,13 @@ h1 {
   align-items: center;
 }
 
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+
 .rock,
 .paper,
 .scissors {
