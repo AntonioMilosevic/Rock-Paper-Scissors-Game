@@ -48,18 +48,27 @@ h1 {
   gap: 20px; /* Adds 20px space between each <p> tag */
 }
 
-.emojis {
-  padding: 32px;
-  font-size: 60px;
-  flex-direction: column;
-  align-items: center;
-}
-
 .score {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 60px;
+}
+
+.player-0 {
+  padding-left: 10px;
+  margin: auto;
+}
+
+.computer-0 {
+  padding-left: 100px;
+}
+
+.emojis {
+  padding: 32px;
+  font-size: 60px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .rock,
