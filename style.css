@@ -55,6 +55,13 @@ h1 {
   padding-top: 60px;
 }
 
+.round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+
 .player-0 {
   padding-left: 10px;
   margin: auto;
