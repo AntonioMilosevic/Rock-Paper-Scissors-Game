@@ -78,6 +78,7 @@ h1 {
   height: 120px;
   font-size: 75%;
   cursor: pointer;
+  border-radius: 15px;
 }
 
 .round {
