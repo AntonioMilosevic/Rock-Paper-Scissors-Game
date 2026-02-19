@@ -87,6 +87,16 @@ h1 {
   transform: scale(1.05); /
 }
 
+.paper:hover{
+  background-color: #4320df; /* New background color on hover */
+  transform: scale(1.05); /
+}
+
+.scissors:hover{
+  background-color: #4320df; /* New background color on hover */
+  transform: scale(1.05); /
+}
+
 .round {
   display: flex;
   justify-content: space-between;
