@@ -55,16 +55,8 @@ h1 {
   padding-top: 60px;
 }
 
-.round {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 60px;
-}
-
 .player-0 {
   padding-left: 10px;
-  margin: auto;
 }
 
 .computer-0 {
@@ -82,8 +74,26 @@ h1 {
 .paper,
 .scissors {
   background-color: hsl(222, 27%, 30%);
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   font-size: 75%;
   cursor: pointer;
+}
+
+.round {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  padding-top: 70px;
+  font-size: 275%;
+}
+
+.player-c {
+  padding-left: 100px;
+}
+
+.computer-R {
+  padding-right: 100px;
 }
