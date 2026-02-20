@@ -70,9 +70,9 @@ h1 {
   align-items: center;
 }
 
-.rock,
-.paper,
-.scissors {
+#rock,
+#paper,
+#scissors {
   background-color: hsl(222, 27%, 30%);
   width: 120px;
   height: 120px;
@@ -82,17 +82,17 @@ h1 {
   transition: 0.3s ease;
 }
 
-.rock:hover{
+#rock:hover{
   background-color: #4320df; /* New background color on hover */
   transform: scale(1.05); /
 }
 
-.paper:hover{
+#paper:hover{
   background-color: #4320df; /* New background color on hover */
   transform: scale(1.05); /
 }
 
-.scissors:hover{
+#scissors:hover{
   background-color: #4320df; /* New background color on hover */
   transform: scale(1.05); /
 }

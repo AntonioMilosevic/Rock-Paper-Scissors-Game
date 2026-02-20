@@ -34,3 +34,49 @@ rock.addEventListener("click", function () {
   console.log("kliknuto");
 });
 console.log(rock);
+
+// Function to generate a random computer choice
+function computerChooses() {
+  const choices = ["Rock", "Paper", "Scissors"];
+  const randomIndex = Math.floor(Math.random() * choices.length);
+  return choices[randomIndex];
+}
+
+// Function to compare choices and determine the winner
+function compareChoices(userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    return "It's a draw!";
+  }
+  if (
+    (userChoice === "Rock" && computerChoice === "Scissors") ||
+    (userChoice === "Paper" && computerChoice === "Rock") ||
+    (userChoice === "Scissors" && computerChoice === "Paper")
+  ) {
+    return "You win!";
+  }
+  return "Computer wins!";
+}
+
+// Main game function triggered by user click
+function playGame(event) {
+  // Get the user's choice from the button's text content
+  const userChoice = event.target.textContent;
+
+  // Get the computer's choice
+  const computerChoice = computerChooses();
+
+  // Determine the result
+  const result = compareChoices(userChoice, computerChoice);
+
+  // Display the results
+  document.getElementById("player").textContent = userChoice;
+  document.getElementById("computer-choice").textContent = computerChoice;
+  document.getElementById("result").textContent = result;
+}
+
+// Add event listeners to the buttons
+document.getElementsByClassName(".rock").addEventListener("click", playGame);
+document.getElementsByClassName(".paper").addEventListener("click", playGame);
+document
+  .getElementsByClassName(".scissors")
+  .addEventListener("click", playGame);
