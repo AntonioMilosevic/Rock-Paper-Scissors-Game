@@ -97,7 +97,7 @@ h1 {
   transform: scale(1.05); /
 }
 
-.round {
+.choice {
   display: flex;
   justify-content: space-between;
   align-items: center;

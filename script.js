@@ -40,6 +40,21 @@ const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
 
+const playerChoice = document.getElementById("player-choice");
+const computerChoice = document.getElementById("computer-choice");
+const playerResult = document.getElementById("player-s");
+const compResult = document.getElementById("computer-s");
+
+//2. Define the computer's choice function
+function getComputerChoice() {
+  const choices = ["rock,paper, scissors"];
+  const randomIndex = Math.floor(Math.random() * choices.length);
+  const computerChoice = choices[randomIndex];
+}
+
+//3.Game rules
+
+
 /*
 // Function to generate a random computer choice
 function computerChooses() {
