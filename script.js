@@ -28,13 +28,19 @@ buttons.forEach((button) => {
   });
 }); */
 
-const rock = document.querySelector(".rock");
+//const rock = document.querySelector(".rock");
 // const rock = document.getElementsByClassName("rock")[0];
-rock.addEventListener("click", function () {
-  console.log("kliknuto");
-});
-console.log(rock);
+//rock.addEventListener("click", function () {
+// console.log("kliknuto");
+//});
+//console.log(rock);
 
+//1. select elements
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorsBtn = document.getElementById("scissors");
+
+/*
 // Function to generate a random computer choice
 function computerChooses() {
   const choices = ["Rock", "Paper", "Scissors"];
@@ -80,3 +86,4 @@ document.getElementsByClassName(".paper").addEventListener("click", playGame);
 document
   .getElementsByClassName(".scissors")
   .addEventListener("click", playGame);
+*/
