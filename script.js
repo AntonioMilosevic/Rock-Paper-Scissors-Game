@@ -54,7 +54,6 @@ function getComputerChoice() {
 
 //3.Game rules
 
-
 /*
 // Function to generate a random computer choice
 function computerChooses() {
