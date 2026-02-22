@@ -80,6 +80,7 @@ h1 {
   cursor: pointer;
   border-radius: 15px;
   transition: 0.3s ease;
+  border: none;
 }
 
 #rock:hover{
@@ -94,17 +95,17 @@ h1 {
 
 #scissors:hover{
   background-color: #4320df; /* New background color on hover */
-  transform: scale(1.05); /
+  transform: scale(1.05); 
 }
 
 .choice {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10px;
+   height: 10px; 
   width: 100%;
   padding-top: 70px;
-  font-size: 275%;
+  font-size: 70px;
 }
 
 .player-c {
