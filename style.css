@@ -108,10 +108,10 @@ h1 {
   font-size: 70px;
 }
 
-.player-c {
+#player-choice {
   padding-left: 100px;
 }
 
-.computer-R {
+#computer-choice {
   padding-right: 100px;
 }
