@@ -50,3 +50,5 @@ if (playerChoice === computerChoice) {
 // napravit funkciju gdje se cuva izbor igraca i prikaze u (user interfejs)browser ,
 // napravi f gdje comp bira izbor -||-
 // napravi f koja pokazuje ko je dobio u toj rundi i na osnovu toga prikazati rezultat u browseru
+
+//lekcija 85
