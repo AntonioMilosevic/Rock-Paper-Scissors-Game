@@ -5,28 +5,28 @@ const scissorsBtn = document.getElementById("scissors");
 
 const buttons = document.querySelectorAll("button");
 
-
 const playerChoice = document.getElementById("player-choice");
 const computerChoice = document.getElementById("computer-choice");
 const playerResult = document.getElementById("player-s");
 const compResult = document.getElementById("computer-s");
 
-const choices = ["rock,paper, scissors"];
+// const choices = ["rock,paper, scissors"];
 
-function getPlayerChoice() {
+function getPlayerChoice(e) {
   //const
-  console.log("click");
-  //rockBtn.textContent = "Toni";
+  console.log(e);
+
   // if (("click", rockBtn)) {
   //   playerChoice.textContent = "✊🏿";
   // } else if (("click", paperBtn)) {
   //   playerChoice.textContent = "✋🏿";
   //   return playerChoice;
   // }
-  playerChoice.textContent = choices;
 }
 
-playerChoice.textContent;
+// function displayPlayerChoice (){
+
+// }
 
 rockBtn.addEventListener("click", getPlayerChoice);
 //rockBtn.addEventListener("click", function () {
