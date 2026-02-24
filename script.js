@@ -3,7 +3,7 @@ const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
 
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll(".emojis");
 
 const playerChoice = document.getElementById("player-choice");
 const computerChoice = document.getElementById("computer-choice");
@@ -12,9 +12,13 @@ const compResult = document.getElementById("computer-s");
 
 // const choices = ["rock,paper, scissors"];
 
-function getPlayerChoice(e) {
-  //const
+function emojis(e) {
   console.log(e);
+}
+
+function getPlayerChoice(e) {
+  console.log(e);
+  playerChoice.textContent = e.target.textContent;
 
   // if (("click", rockBtn)) {
   //   playerChoice.textContent = "✊🏿";
@@ -50,5 +54,3 @@ if (playerChoice === computerChoice) {
 // napravit funkciju gdje se cuva izbor igraca i prikaze u (user interfejs)browser ,
 // napravi f gdje comp bira izbor -||-
 // napravi f koja pokazuje ko je dobio u toj rundi i na osnovu toga prikazati rezultat u browseru
-
-//lekcija 85
