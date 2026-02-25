@@ -3,29 +3,16 @@ const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
 
-const buttons = document.querySelectorAll(".emojis");
-
 const playerChoice = document.getElementById("player-choice");
 const computerChoice = document.getElementById("computer-choice");
 const playerResult = document.getElementById("player-s");
 const compResult = document.getElementById("computer-s");
 
-// const choices = ["rock,paper, scissors"];
-
-function emojis(e) {
-  console.log(e);
-}
+const choices = ["rock", "paper", "scissors"];
 
 function getPlayerChoice(e) {
   console.log(e);
   playerChoice.textContent = e.target.textContent;
-
-  // if (("click", rockBtn)) {
-  //   playerChoice.textContent = "✊🏿";
-  // } else if (("click", paperBtn)) {
-  //   playerChoice.textContent = "✋🏿";
-  //   return playerChoice;
-  // }
 }
 
 // function displayPlayerChoice (){
@@ -44,13 +31,17 @@ function getComputerChoice() {
   const randomIndex = Math.floor(Math.random() * choices.length);
   const computerChoice = choices[randomIndex];
   // computerChoice.textContent
+  console.log(e);
+  computerChoice.textContent = e.target.textContent;
   return computerChoice;
+
+  function getComputerChoiceDisplay() {}
 }
 
 //3.Game rules
 if (playerChoice === computerChoice) {
 }
-// Pratit score igre , izbor playera, izbor computera,
+// Pratit score igre , izbor playera*, izbor computera,
 // napravit funkciju gdje se cuva izbor igraca i prikaze u (user interfejs)browser ,
 // napravi f gdje comp bira izbor -||-
 // napravi f koja pokazuje ko je dobio u toj rundi i na osnovu toga prikazati rezultat u browseru
