@@ -8,11 +8,10 @@ const computerChoice = document.getElementById("computer-choice");
 const playerResult = document.getElementById("player-s");
 const compResult = document.getElementById("computer-s");
 
-const choices = ["rock", "paper", "scissors"];
-
 function getPlayerChoice(e) {
   console.log(e);
   playerChoice.textContent = e.target.textContent;
+  // playerChoice.textContent = e.target.id;
 }
 
 // function displayPlayerChoice (){
@@ -28,14 +27,16 @@ scissorsBtn.addEventListener("click", getPlayerChoice);
 
 //2. Define the computer's choice function
 function getComputerChoice() {
+  const choices = ["rock", "paper", "scissors"];
   const randomIndex = Math.floor(Math.random() * choices.length);
   const computerChoice = choices[randomIndex];
   // computerChoice.textContent
-  console.log(e);
-  computerChoice.textContent = e.target.textContent;
-  return computerChoice;
 
-  function getComputerChoiceDisplay() {}
+  computerChoice.textContent = e.target.textContent;
+
+  computerChoiceDisplay.addEventListener("click", getComputerChoice);
+  console.log(getComputerChoice);
+  return computerChoiceDisplay;
 }
 
 //3.Game rules
