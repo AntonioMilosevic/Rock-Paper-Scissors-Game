@@ -3,38 +3,44 @@ const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
 
-const choices = document.getElementsByClassName(".emojis");
+const emojis = document.getElementsByClassName(".emojis");
 
 const playerChoice = document.getElementById("player-choice");
 const computerChoice = document.getElementById("computer-choice");
 const playerResult = document.getElementById("player-s");
 const compResult = document.getElementById("computer-s");
 
-function getPlayerChoice(e) {
-  console.log(e);
+const choices = [rockBtn, paperBtn, scissorsBtn];
+// let playerChoice = x
+
+const getPlayerChoice = function (e) {
+  console.dir(e.target);
   playerChoice.textContent = e.target.textContent;
   // playerChoice.textContent = e.target.id;
+};
 
-  //2. Define the computer's choice function
-  function getComputerChoice() {
-    //const choices = ["rock", "paper", "scissors"];
-    const randomIndex = Math.floor(Math.random() * choices.length);
-    const computerChoice = choices[randomIndex];
-    // computerChoice.textContent
+//2. Define the computer's choice function
+function getComputerChoice() {
+  const randomIndex = Math.floor(Math.random() * choices.length);
+  const compChoice = choices[randomIndex];
+  // computerChoice.textContent
+  console.log(compChoice);
+  computerChoice.textContent = compChoice.textContent;
 
-    computerChoice.textContent = e.target.textContent;
-
-    // computerChoiceDisplay("click", getComputerChoice);
-    // console.log(getComputerChoice);
-    // return computerChoiceDisplay;
-  }
+  // computerChoiceDisplay("click", getComputerChoice);
+  // console.log(getComputerChoice);
+  // return computerChoiceDisplay;
 }
-
 // function displayPlayerChoice (){
+
+function checkRound(e) {
+  getPlayerChoice(e);
+  getComputerChoice();
+}
 
 // }
 
-rockBtn.addEventListener("click", getPlayerChoice);
+rockBtn.addEventListener("click", checkRound);
 //rockBtn.addEventListener("click", function () {
 // console.log("click");
 // });
