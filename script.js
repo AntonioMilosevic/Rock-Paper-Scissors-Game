@@ -3,6 +3,8 @@ const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
 
+const choices = document.getElementsByClassName(".emojis");
+
 const playerChoice = document.getElementById("player-choice");
 const computerChoice = document.getElementById("computer-choice");
 const playerResult = document.getElementById("player-s");
@@ -12,6 +14,20 @@ function getPlayerChoice(e) {
   console.log(e);
   playerChoice.textContent = e.target.textContent;
   // playerChoice.textContent = e.target.id;
+
+  //2. Define the computer's choice function
+  function getComputerChoice() {
+    //const choices = ["rock", "paper", "scissors"];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    const computerChoice = choices[randomIndex];
+    // computerChoice.textContent
+
+    computerChoice.textContent = e.target.textContent;
+
+    // computerChoiceDisplay("click", getComputerChoice);
+    // console.log(getComputerChoice);
+    // return computerChoiceDisplay;
+  }
 }
 
 // function displayPlayerChoice (){
@@ -24,20 +40,6 @@ rockBtn.addEventListener("click", getPlayerChoice);
 // });
 paperBtn.addEventListener("click", getPlayerChoice);
 scissorsBtn.addEventListener("click", getPlayerChoice);
-
-//2. Define the computer's choice function
-function getComputerChoice() {
-  const choices = ["rock", "paper", "scissors"];
-  const randomIndex = Math.floor(Math.random() * choices.length);
-  const computerChoice = choices[randomIndex];
-  // computerChoice.textContent
-
-  computerChoice.textContent = e.target.textContent;
-
-  // computerChoiceDisplay.addEventListener("click", getComputerChoice);
-  // console.log(getComputerChoice);
-  // return computerChoiceDisplay;
-}
 
 //3.Game rules
 if (playerChoice === computerChoice) {
