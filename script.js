@@ -12,12 +12,15 @@ const compResult = document.getElementById("computer-s");
 
 const choices = [rockBtn, paperBtn, scissorsBtn];
 // let playerChoice = x
+// Trebace mi varijabla za izbor igraca i varijabla za izbor computera
+// Kada se pozovu funkcije getPlayerCh i getCompCh ovim var dodijeliti odgovarajucu vrijednost
+// I onda uporediti te 2 varijable
 
-const getPlayerChoice = function (e) {
-  console.dir(e.target);
+function getPlayerChoice(e) {
+  console.dir("ovo je getPlayerChoice", e.target);
   playerChoice.textContent = e.target.textContent;
   // playerChoice.textContent = e.target.id;
-};
+}
 
 //2. Define the computer's choice function
 function getComputerChoice() {
@@ -44,8 +47,8 @@ rockBtn.addEventListener("click", checkRound);
 //rockBtn.addEventListener("click", function () {
 // console.log("click");
 // });
-paperBtn.addEventListener("click", getPlayerChoice);
-scissorsBtn.addEventListener("click", getPlayerChoice);
+paperBtn.addEventListener("click", checkRound);
+scissorsBtn.addEventListener("click", checkRound);
 
 //3.Game rules
 if (playerChoice === computerChoice) {
@@ -54,3 +57,5 @@ if (playerChoice === computerChoice) {
 // napravit funkciju gdje se cuva izbor igraca i prikaze u (user interfejs)browser ,
 // napravi f gdje comp bira izbor -||-
 // napravi f koja pokazuje ko je dobio u toj rundi i na osnovu toga prikazati rezultat u browseru
+
+// razlika izmedju func definition i expression
