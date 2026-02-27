@@ -34,9 +34,9 @@ function getComputerChoice() {
 
   computerChoice.textContent = e.target.textContent;
 
-  computerChoiceDisplay.addEventListener("click", getComputerChoice);
-  console.log(getComputerChoice);
-  return computerChoiceDisplay;
+  // computerChoiceDisplay.addEventListener("click", getComputerChoice);
+  // console.log(getComputerChoice);
+  // return computerChoiceDisplay;
 }
 
 //3.Game rules
