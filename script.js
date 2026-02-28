@@ -11,6 +11,10 @@ const playerResult = document.getElementById("player-s");
 const compResult = document.getElementById("computer-s");
 
 const choices = [rockBtn, paperBtn, scissorsBtn];
+
+const displayMessage = function (message) {
+  document.querySelector(".message").textContent = message;
+};
 // let playerChoice = x
 // Trebace mi varijabla za izbor igraca i varijabla za izbor computera
 // Kada se pozovu funkcije getPlayerCh i getCompCh ovim var dodijeliti odgovarajucu vrijednost
@@ -52,6 +56,8 @@ scissorsBtn.addEventListener("click", checkRound);
 
 //3.Game rules
 if (playerChoice === computerChoice) {
+  console.log(displayMessage);
+  displayMessage(`It's a draw`);
 }
 // Pratit score igre , izbor playera*, izbor computera,
 // napravit funkciju gdje se cuva izbor igraca i prikaze u (user interfejs)browser ,
