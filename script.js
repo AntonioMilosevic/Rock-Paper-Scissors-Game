@@ -17,6 +17,7 @@ const displayMessage = function (message) {
 };
 
 let player;
+let computer;
 //console.log(player);
 
 // let playerChoice = x
