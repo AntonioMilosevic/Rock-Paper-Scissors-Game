@@ -16,8 +16,8 @@ const displayMessage = function (message) {
   document.querySelector(".message-1").textContent = message;
 };
 
-let player;
-let computer;
+let player = 0;
+let computer = 0;
 //console.log(player);
 
 // let playerChoice = x
@@ -34,11 +34,12 @@ function getPlayerChoice(e) {
 }
 
 //2. Define the computer's choice function
-function getComputerChoice() {
+function getComputerChoice(e) {
   const randomIndex = Math.floor(Math.random() * choices.length);
   const compChoice = choices[randomIndex];
   // computerChoice.textContent
   console.log(compChoice);
+  computer = computer = compChoice.textContent;
   computerChoice.textContent = compChoice.textContent;
 
   // computerChoiceDisplay("click", getComputerChoice);
@@ -50,7 +51,9 @@ function getComputerChoice() {
 
 function checkRound(e) {
   getPlayerChoice(e);
-  getComputerChoice();
+  getComputerChoice(e);
+  console.log("Player", player);
+  console.log("Computer", computer);
   roundWinner();
 }
 
