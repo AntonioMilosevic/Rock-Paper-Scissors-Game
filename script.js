@@ -16,8 +16,10 @@ const displayMessage = function (message) {
   document.querySelector(".message-1").textContent = message;
 };
 
-let player = 0;
-let computer = 0;
+let player;
+let computer;
+let playerScore = 0;
+let computerScore = 0;
 //console.log(player);
 
 // let playerChoice = x
