@@ -38,7 +38,7 @@ function getPlayerChoice(e) {
   player = value;
 
   //playerChoice.textContent = e.target.textContent;
-  player = e.target.textContent;
+  // player = e.target.textContent;
   // console.log(player);
 }
 
@@ -68,23 +68,25 @@ function checkRound(e) {
   roundWinner();
 }
 
-// const roundWinner = function (player, computer) {
-//   if (player === computer) {
-//     displayMessage(`It's a draw`);
-//     console.log(`It's a draw`);
-//   }
+const roundWinner = function () {
+  console.log("Ovo je player", player);
+  console.log("Ovo je computer", computer);
 
-//   if (player ===rockBtn && computer===scissorsBtn,
-//     player=== scissorsBtn && computer === paperBtn,
-//     player===paperBtn && computer === rockBtn,
-//   ){
-//     displayMessage('Player wins')
-//     playerScore=playerScore+1
-//   } else {
-//     displayMessage ('Computer wins')
-//     computerScore=computerScore+1
-//   }
-// };
+  //   if (player === computer) {
+  //     displayMessage(`It's a draw`);
+  //     console.log(`It's a draw`);
+  //   }
+  //   if (player ===rockBtn && computer===scissorsBtn,
+  //     player=== scissorsBtn && computer === paperBtn,
+  //     player===paperBtn && computer === rockBtn,
+  //   ){
+  //     displayMessage('Player wins')
+  //     playerScore=playerScore+1  ili ++
+  //   } else {
+  //     displayMessage ('Computer wins')
+  //     computerScore=computerScore+1
+  //   }
+};
 
 rockBtn.addEventListener("click", checkRound);
 //rockBtn.addEventListener("click", function () {
