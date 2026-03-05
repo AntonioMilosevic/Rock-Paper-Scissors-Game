@@ -16,11 +16,12 @@ const displayMessage = function (message) {
   document.querySelector(".message-1").textContent = message;
 };
 
+// let ako se vrijednost mijenja, const ako je konstantna
+
 let player;
 let computer;
 let playerScore = 0;
 let computerScore = 0;
-//console.log(player);
 
 // let playerChoice = x
 // Trebace mi varijabla za izbor igraca i varijabla za izbor computera
@@ -28,17 +29,23 @@ let computerScore = 0;
 // I onda uporediti te 2 varijable
 
 function getPlayerChoice(e) {
-  console.dir("ovo je getPlayerChoice", e.target);
-  playerChoice.textContent = e.target.textContent;
-  // playerChoice.textContent = e.target.id;
+  //  console.dir("ovo je getPlayerChoice", e.target);
+  console.log(e.target.textContent);
+
+  const value = e.target.id;
+  const text = e.target.textContent;
+  playerChoice.textContent = text;
+  player = value;
+
+  //playerChoice.textContent = e.target.textContent;
   player = e.target.textContent;
-  console.log(player);
+  // console.log(player);
 }
 
 //2. Define the computer's choice function
-function getComputerChoice(e) {
+function getComputerChoice() {
   const randomIndex = Math.floor(Math.random() * choices.length);
-  const compChoice = choices[randomIndex];
+  const compChoice = choices[randomIndex].id;
   // computerChoice.textContent
   console.log(compChoice);
   computer = computer = compChoice.textContent;
@@ -52,18 +59,31 @@ function getComputerChoice(e) {
 // }
 
 function checkRound(e) {
+  // console.log(e);
   getPlayerChoice(e);
-  getComputerChoice(e);
+  getComputerChoice();
   console.log("Player", player);
   console.log("Computer", computer);
   roundWinner();
 }
 
-const roundWinner = function (playerChoice, computerChoice) {
-  if (playerChoice === computerChoice) {
-    displayMessage(`It's a draw`);
-  }
-};
+// const roundWinner = function (player, computer) {
+//   if (player === computer) {
+//     displayMessage(`It's a draw`);
+//     console.log(`It's a draw`);
+//   }
+
+//   if (player ===rockBtn && computer===scissorsBtn,
+//     player=== scissorsBtn && computer === paperBtn,
+//     player===paperBtn && computer === rockBtn,
+//   ){
+//     displayMessage('Player wins')
+//     playerScore=playerScore+1
+//   } else {
+//     displayMessage ('Computer wins')
+//     computerScore=computerScore+1
+//   }
+// };
 
 rockBtn.addEventListener("click", checkRound);
 //rockBtn.addEventListener("click", function () {
