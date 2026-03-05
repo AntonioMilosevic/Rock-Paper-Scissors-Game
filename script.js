@@ -46,10 +46,11 @@ function getPlayerChoice(e) {
 function getComputerChoice() {
   const randomIndex = Math.floor(Math.random() * choices.length);
   const compChoice = choices[randomIndex].id;
-  // computerChoice.textContent
-  console.log(compChoice);
+  const compChoiceEM = choices[randomIndex].textContent;
+
   computer = computer = compChoice.textContent;
-  computerChoice.textContent = compChoice.textContent;
+  computerChoice.textContent = compChoiceEM;
+  computer = compChoice;
 
   // computerChoiceDisplay("click", getComputerChoice);
   // console.log(getComputerChoice);
