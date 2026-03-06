@@ -11,7 +11,7 @@ const playerResult = document.getElementById("player-s");
 const compResult = document.getElementById("computer-s");
 
 const choices = [rockBtn, paperBtn, scissorsBtn];
-
+//
 const displayMessage = function (message) {
   document.querySelector(".message-1").textContent = message;
 };
