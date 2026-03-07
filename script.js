@@ -74,6 +74,7 @@ const roundWinner = function () {
 
   if (player === computer) {
     displayMessage("It's a draw");
+    console.log("Draw");
   } else if (
     (player === "rock" && computer === "scissors") ||
     (player === "scissors" && computer === "paper") ||
@@ -81,6 +82,9 @@ const roundWinner = function () {
   ) {
     displayMessage("Player wins");
     console.log("Player wins");
+  } else {
+    displayMessage("Computer wins");
+    console.log("COmp wins");
   }
 };
 // if (player === computer) {
