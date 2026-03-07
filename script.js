@@ -15,6 +15,9 @@ const choices = [rockBtn, paperBtn, scissorsBtn];
 const displayMessage = function (message) {
   document.querySelector(".message-1").textContent = message;
 };
+const displayMessage = function (message) {
+  document.querySelector(".message-2").textContent = message;
+};
 
 // let ako se vrijednost mijenja, const ako je konstantna
 
