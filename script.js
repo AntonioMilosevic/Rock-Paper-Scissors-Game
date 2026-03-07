@@ -15,9 +15,6 @@ const choices = [rockBtn, paperBtn, scissorsBtn];
 const displayMessage = function (message) {
   document.querySelector(".message-1").textContent = message;
 };
-const displayMessage = function (message) {
-  document.querySelector(".message-2").textContent = message;
-};
 
 // let ako se vrijednost mijenja, const ako je konstantna
 
@@ -76,18 +73,21 @@ const roundWinner = function () {
   console.log("Ovo je computer", computer);
 
   if (player === computer) {
+    player === rock && computer === rock;
     displayMessage("It's a draw");
-    console.log("Draw");
-  } else if (
-    (player === "rock" && computer === "scissors") ||
-    (player === "scissors" && computer === "paper") ||
-    (player === "paper" && computer === "rock")
-  ) {
-    displayMessage("Player wins");
-    console.log("Player wins");
-  } else {
-    displayMessage("Computer wins");
-    console.log("COmp wins");
+    console.log("Rocks ties with rock");
+    // } else if (player === "rock" && computer === "scissors"){
+    //   displayMessage1('Player wins')
+    // }
+    // //   (player === "scissors" && computer === "paper") ||
+    // //   (player === "paper" && computer === "rock")
+    // // ) {
+    // //   displayMessage("Player wins");
+    // //   console.log("Player wins");
+    // } else {
+    //   displayMessage("Computer wins");
+    //   console.log("COmp wins");
+    // }
   }
 };
 // if (player === computer) {
