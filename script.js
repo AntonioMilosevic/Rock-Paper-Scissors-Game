@@ -11,7 +11,7 @@ const playerResult = document.getElementById("player-s");
 const compResult = document.getElementById("computer-s");
 
 const choices = [rockBtn, paperBtn, scissorsBtn];
-//
+
 const displayMessage = function (message) {
   document.querySelector(".message-1").textContent = message;
 };
@@ -72,21 +72,32 @@ const roundWinner = function () {
   console.log("Ovo je player", player);
   console.log("Ovo je computer", computer);
 
-  //   if (player === computer) {
-  //     displayMessage(`It's a draw`);
-  //     console.log(`It's a draw`);
-  //   }
-  //   if (player ===rockBtn && computer===scissorsBtn,
-  //     player=== scissorsBtn && computer === paperBtn,
-  //     player===paperBtn && computer === rockBtn,
-  //   ){
-  //     displayMessage('Player wins')
-  //     playerScore=playerScore+1  ili ++
-  //   } else {
-  //     displayMessage ('Computer wins')
-  //     computerScore=computerScore+1
-  //   }
+  if (player === computer) {
+    displayMessage("It's a draw");
+  } else if (
+    (player === "rock" && computer === "scissors") ||
+    (player === "scissors" && computer === "paper") ||
+    (player === "paper" && computer === "rock")
+  ) {
+    displayMessage("Player wins");
+    console.log("Player wins");
+  }
 };
+// if (player === computer) {
+//   // displayMessage(`It's a draw`);
+//   console.log(player, computer, player === computer);
+// }
+
+//   if (player ===rockBtn && computer===scissorsBtn,
+//     player=== scissorsBtn && computer === paperBtn,
+//     player===paperBtn && computer === rockBtn,
+//   ){
+//     displayMessage('Player wins')
+//     playerScore=playerScore+1  ili ++
+//   } else {
+//     displayMessage ('Computer wins')
+//     computerScore=computerScore+1
+//   }
 
 rockBtn.addEventListener("click", checkRound);
 //rockBtn.addEventListener("click", function () {
