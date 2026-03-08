@@ -12,9 +12,13 @@ const compResult = document.getElementById("computer-s");
 
 const choices = [rockBtn, paperBtn, scissorsBtn];
 
-const displayMessage = function (message) {
-  document.querySelector(".message-1").textContent = message;
+const displayMessage1 = function (result, message) {
+  document.querySelector(".message-1").textContent = result;
+  document.querySelector(".message-2").textContent = message;
 };
+// const displayMessage2 = function (message) {
+//   document.querySelector(".message-2").textContent = message;
+// };
 
 // let ako se vrijednost mijenja, const ako je konstantna
 
@@ -73,38 +77,47 @@ const roundWinner = function () {
   console.log("Ovo je computer", computer);
 
   if (player === computer) {
-    player === rock && computer === rock;
-    displayMessage("It's a draw");
-    console.log("Rocks ties with rock");
-    // } else if (player === "rock" && computer === "scissors"){
-    //   displayMessage1('Player wins')
-    // }
-    // //   (player === "scissors" && computer === "paper") ||
-    // //   (player === "paper" && computer === "rock")
-    // // ) {
-    // //   displayMessage("Player wins");
-    // //   console.log("Player wins");
-    // } else {
-    //   displayMessage("Computer wins");
-    //   console.log("COmp wins");
-    // }
+    // player === "rock" && computer === "rock";
+    displayMessage1(
+      "It's a draw",
+      `${player.charAt(0).toUpperCase() + player.slice(1)}
+      ties with
+      ${computer}`,
+    );
+  } else if (
+    (player === "rock" && computer === "scissors") ||
+    (player === "scissors" && computer === "paper") ||
+    (player === "paper" && computer === "rock")
+  ) {
+    displayMessage1(
+      "Player wins",
+      `${player.charAt(0).toUpperCase() + player.slice(1)} beats ${computer}`,
+    );
+  } else {
+    displayMessage1(
+      "Computer wins",
+      `${
+        computer.charAt(0).toUpperCase() + computer.slice(1)
+      } beats ${player} `,
+    );
   }
 };
 // if (player === computer) {
 //   // displayMessage(`It's a draw`);
 //   console.log(player, computer, player === computer);
 // }
-
-//   if (player ===rockBtn && computer===scissorsBtn,
-//     player=== scissorsBtn && computer === paperBtn,
-//     player===paperBtn && computer === rockBtn,
-//   ){
-//     displayMessage('Player wins')
-//     playerScore=playerScore+1  ili ++
-//   } else {
-//     displayMessage ('Computer wins')
-//     computerScore=computerScore+1
-//   }
+// } else if (player === "rock" && computer === "scissors"){
+//   displayMessage1('Player wins')
+// }
+// //   (player === "scissors" && computer === "paper") ||
+// //   (player === "paper" && computer === "rock")
+// // ) {
+// //   displayMessage("Player wins");
+// //   console.log("Player wins");
+// } else {
+//   displayMessage("Computer wins");
+//   console.log("COmp wins");
+// }
 
 rockBtn.addEventListener("click", checkRound);
 //rockBtn.addEventListener("click", function () {
