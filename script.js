@@ -7,8 +7,8 @@ const emojis = document.getElementsByClassName(".emojis");
 
 const playerChoice = document.getElementById("player-choice");
 const computerChoice = document.getElementById("computer-choice");
-const playerResult = document.getElementById("player-s");
-const compResult = document.getElementById("computer-s");
+const playerDisplay = document.getElementById("player-s");
+const compDisplay = document.getElementById("computer-s");
 
 const choices = [rockBtn, paperBtn, scissorsBtn];
 
@@ -52,7 +52,7 @@ function getComputerChoice() {
   const compChoice = choices[randomIndex].id;
   const compChoiceEM = choices[randomIndex].textContent;
 
-  computer = computer = compChoice.textContent;
+  computer = compChoice.textContent;
   computerChoice.textContent = compChoiceEM;
   computer = compChoice;
 
@@ -76,11 +76,13 @@ const roundWinner = function () {
   console.log("Ovo je player", player);
   console.log("Ovo je computer", computer);
 
+  playerScore = playerResult;
+
   if (player === computer) {
     // player === "rock" && computer === "rock";
     displayMessage1(
       "It's a draw",
-      `${player.charAt(0).toUpperCase() + player.slice(1)}
+      `${player.charAt(0).toUpperCase() + player.slice(1)} // za veliko slovo prve rijeci
       ties with
       ${computer}`,
     );
@@ -102,22 +104,6 @@ const roundWinner = function () {
     );
   }
 };
-// if (player === computer) {
-//   // displayMessage(`It's a draw`);
-//   console.log(player, computer, player === computer);
-// }
-// } else if (player === "rock" && computer === "scissors"){
-//   displayMessage1('Player wins')
-// }
-// //   (player === "scissors" && computer === "paper") ||
-// //   (player === "paper" && computer === "rock")
-// // ) {
-// //   displayMessage("Player wins");
-// //   console.log("Player wins");
-// } else {
-//   displayMessage("Computer wins");
-//   console.log("COmp wins");
-// }
 
 rockBtn.addEventListener("click", checkRound);
 //rockBtn.addEventListener("click", function () {
