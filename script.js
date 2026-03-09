@@ -27,6 +27,10 @@ let computer;
 let playerScore = 0;
 let computerScore = 0;
 
+function updateScore() {
+  playerDisplay.textContent = playerScore;
+  compDisplay.textContent = computerScore;
+}
 // let playerChoice = x
 // Trebace mi varijabla za izbor igraca i varijabla za izbor computera
 // Kada se pozovu funkcije getPlayerCh i getCompCh ovim var dodijeliti odgovarajucu vrijednost
@@ -76,16 +80,14 @@ const roundWinner = function () {
   console.log("Ovo je player", player);
   console.log("Ovo je computer", computer);
 
-  playerScore = playerDisplay;
-  computerScore = compDisplay;
-
   if (player === computer) {
     // player === "rock" && computer === "rock";
     displayMessage1(
       "It's a draw",
-      `${player.charAt(0).toUpperCase() + player.slice(1)} // za veliko slovo prve rijeci
+      `${player.charAt(0).toUpperCase() + player.slice(1)} 
       ties with
       ${computer}`,
+      // za veliko slovo prve rijeci
     );
   } else if (
     (player === "rock" && computer === "scissors") ||
@@ -96,6 +98,8 @@ const roundWinner = function () {
       "Player wins",
       `${player.charAt(0).toUpperCase() + player.slice(1)} beats ${computer}`,
     );
+    playerScore++;
+    console.log("ovo je playerScore");
   } else {
     displayMessage1(
       "Computer wins",
@@ -103,9 +107,20 @@ const roundWinner = function () {
         computer.charAt(0).toUpperCase() + computer.slice(1)
       } beats ${player} `,
     );
-  }
-};
+    computerScore++;
 
+    //      1.
+    // let player/comp Score=0
+    // const player/computer Display = document.querySelector(html clasa)
+
+    // 2.
+    // function addPoint (){
+    // player/comp Score++;
+    // player/comp Display.innerText = player/comp Score
+    //   }
+  }
+  updateScore();
+};
 rockBtn.addEventListener("click", checkRound);
 //rockBtn.addEventListener("click", function () {
 // console.log("click");
