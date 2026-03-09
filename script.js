@@ -76,7 +76,8 @@ const roundWinner = function () {
   console.log("Ovo je player", player);
   console.log("Ovo je computer", computer);
 
-  playerScore = playerResult;
+  playerScore = playerDisplay;
+  computerScore = compDisplay;
 
   if (player === computer) {
     // player === "rock" && computer === "rock";
