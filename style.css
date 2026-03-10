@@ -42,7 +42,7 @@ h1 {
 
 .message-2 {
   padding-left: 80px;
-  margin: 20px;
+ margin: 20px;
   display: block;
   flex-direction: column-reverse; /* Stacks the items vertically */
   gap: 20px; /* Adds 20px space between each <p> tag */
