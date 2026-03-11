@@ -108,16 +108,6 @@ const roundWinner = function () {
       } beats ${player} `,
     );
     computerScore++;
-
-    //      1.
-    // let player/comp Score=0
-    // const player/computer Display = document.querySelector(html clasa)
-
-    // 2.
-    // function addPoint (){
-    // player/comp Score++;
-    // player/comp Display.innerText = player/comp Score
-    //   }
   }
   updateScore();
 };
