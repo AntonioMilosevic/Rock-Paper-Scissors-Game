@@ -26,11 +26,44 @@ let player;
 let computer;
 let playerScore = 0;
 let computerScore = 0;
+let playing = true;
+
+const winningScore = 5;
+// const init = function () {
+//   scores = [0, 0];
+//   currentScore = 0;
+//   activePlayer = 0;
+//   playing = true;
+
+//   score0El.textContent = 0;
+//   score1El.textContent = 0;
+//   current0El.textContent = 0;
+//   current1El.textContent = 0;
+
+//   diceEl.classList.add('hidden');
+//   player0El.classList.remove('player--winner');
+//   player1El.classList.remove('player--winner');
+//   player0El.classList.add('player--active');
+//   player1El.classList.remove('player--active');
+// };
+// init();
 
 function updateScore() {
   playerDisplay.textContent = playerScore;
   compDisplay.textContent = computerScore;
 }
+
+function resetGame() {
+  if (playerScore === winningScore) {
+    displayMessage1("Player wins the game!");
+    playing = false;
+  }
+  if (computerScore === winningScore) {
+    displayMessage1("Computer wins the game!");
+    playing = false;
+  }
+}
+
 // let playerChoice = x
 // Trebace mi varijabla za izbor igraca i varijabla za izbor computera
 // Kada se pozovu funkcije getPlayerCh i getCompCh ovim var dodijeliti odgovarajucu vrijednost
@@ -69,13 +102,16 @@ function getComputerChoice() {
 
 function checkRound(e) {
   // console.log(e);
+  // ako igra nije aktivna, funkcija se ne izvrsava
+  if (!playing) return;
+
   getPlayerChoice(e);
   getComputerChoice();
   console.log("Player", player);
   console.log("Computer", computer);
   roundWinner();
 }
-
+//
 const roundWinner = function () {
   console.log("Ovo je player", player);
   console.log("Ovo je computer", computer);
@@ -110,6 +146,7 @@ const roundWinner = function () {
     computerScore++;
   }
   updateScore();
+  resetGame();
 };
 rockBtn.addEventListener("click", checkRound);
 //rockBtn.addEventListener("click", function () {
