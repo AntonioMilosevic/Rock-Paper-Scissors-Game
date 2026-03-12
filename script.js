@@ -135,7 +135,7 @@ const roundWinner = function () {
       `${player.charAt(0).toUpperCase() + player.slice(1)} beats ${computer}`,
     );
     playerScore++;
-    console.log("ovo je playerScore");
+    //console.log("ovo je playerScore");
   } else {
     displayMessage1(
       "Computer wins",
