@@ -48,6 +48,12 @@ h1 {
   gap: 20px; /* Adds 20px space between each <p> tag */
 }
 
+.hidden {
+  /* display: none; */
+  flex-direction: column;
+  align-items: center;
+}
+
 .score {
   display: flex;
   justify-content: center;
