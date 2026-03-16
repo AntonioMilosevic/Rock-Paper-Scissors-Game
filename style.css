@@ -49,10 +49,31 @@ h1 {
 }
 
 .hidden {
-  /* display: none; */
-  flex-direction: column;
-  align-items: center;
+  display: none;
 }
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(271, 70%, 22%);
+}
+
+.newGame {
+  background-color: hsl(222, 27%, 30%);
+  
+  width: 200px;
+  height: 50px;
+  font-size: 75%;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  color: antiquewhite;
+  font-size: 25px;
+}
+
 
 .score {
   display: flex;

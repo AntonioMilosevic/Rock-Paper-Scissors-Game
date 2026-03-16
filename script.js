@@ -2,6 +2,7 @@
 const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
+const newGameBtn = document.getElementsByClassName(".newGame");
 
 const emojis = document.getElementsByClassName(".emojis");
 
@@ -27,6 +28,12 @@ let computer;
 let playerScore = 0;
 let computerScore = 0;
 let playing = true;
+
+const newGame = function () {
+  playerScore = 0;
+  computerScore = 0;
+  playing = true;
+};
 
 const winningScore = 5;
 // const init = function () {
@@ -147,6 +154,7 @@ const roundWinner = function () {
   }
   updateScore();
   resetGame();
+  newGame();
 };
 rockBtn.addEventListener("click", checkRound);
 //rockBtn.addEventListener("click", function () {
@@ -154,12 +162,8 @@ rockBtn.addEventListener("click", checkRound);
 // });
 paperBtn.addEventListener("click", checkRound);
 scissorsBtn.addEventListener("click", checkRound);
+newGameBtn.addEventListener("click", newGame);
 
-//3.Game rules
-
-// Pratit score igre , izbor playera*, izbor computera,
-// napravit funkciju gdje se cuva izbor igraca i prikaze u (user interfejs)browser ,
-// napravi f gdje comp bira izbor -||-
-// napravi f koja pokazuje ko je dobio u toj rundi i na osnovu toga prikazati rezultat u browseru
+//Trebace mi event listener za btn ('click', funkcija koja ce igru vratiti na pocetna podesavanja)
 
 // razlika izmedju func definition i expression
