@@ -154,7 +154,6 @@ const roundWinner = function () {
   }
   updateScore();
   resetGame();
-  newGame();
 };
 rockBtn.addEventListener("click", checkRound);
 //rockBtn.addEventListener("click", function () {
