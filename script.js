@@ -78,9 +78,8 @@ function resetGame() {
     playing = false;
   }
 
-  openModal();
-  // modal.classList.remove("hidden");
-  // overlay.classList.remove("hidden");
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
 }
 
 // let playerChoice = x
