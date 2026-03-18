@@ -4,6 +4,9 @@ const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
 const newGameBtn = document.getElementsByClassName(".newGame");
 
+const modal = document.getElementsByClassName(".modal");
+const overlay = document.getElementsByClassName(".overlay");
+
 const emojis = document.getElementsByClassName(".emojis");
 
 const playerChoice = document.getElementById("player-choice");
@@ -13,9 +16,14 @@ const compDisplay = document.getElementById("computer-s");
 
 const choices = [rockBtn, paperBtn, scissorsBtn];
 
-const displayMessage1 = function (result, message) {
+const displayMessage = function (result, message) {
   document.querySelector(".message-1").textContent = result;
   document.querySelector(".message-2").textContent = message;
+};
+
+const openModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
 };
 // const displayMessage2 = function (message) {
 //   document.querySelector(".message-2").textContent = message;
@@ -62,11 +70,11 @@ function updateScore() {
 
 function resetGame() {
   if (playerScore === winningScore) {
-    displayMessage1("Player wins the game!");
+    displayMessage("Player wins the game!");
     playing = false;
   }
   if (computerScore === winningScore) {
-    displayMessage1("Computer wins the game!");
+    displayMessage("Computer wins the game!");
     playing = false;
   }
 }
@@ -125,7 +133,7 @@ const roundWinner = function () {
 
   if (player === computer) {
     // player === "rock" && computer === "rock";
-    displayMessage1(
+    displayMessage(
       "It's a draw",
       `${player.charAt(0).toUpperCase() + player.slice(1)} 
       ties with
@@ -137,14 +145,14 @@ const roundWinner = function () {
     (player === "scissors" && computer === "paper") ||
     (player === "paper" && computer === "rock")
   ) {
-    displayMessage1(
+    displayMessage(
       "Player wins",
       `${player.charAt(0).toUpperCase() + player.slice(1)} beats ${computer}`,
     );
     playerScore++;
     console.log("ovo je playerScore");
   } else {
-    displayMessage1(
+    displayMessage(
       "Computer wins",
       `${
         computer.charAt(0).toUpperCase() + computer.slice(1)
