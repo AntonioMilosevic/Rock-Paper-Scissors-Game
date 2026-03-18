@@ -77,6 +77,9 @@ function resetGame() {
     displayMessage("Computer wins the game!");
     playing = false;
   }
+
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
 }
 
 // let playerChoice = x
