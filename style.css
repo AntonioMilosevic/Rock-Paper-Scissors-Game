@@ -52,16 +52,7 @@ h1 {
   display: none;
 } */
 
-.modal {
-  position: fixed;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1001;
-  background: rgb(56, 48, 48);
-  padding: 20px;
-  width: 50%;
-  height: 50%;
-}
+
  
 
 .overlay {
@@ -74,13 +65,39 @@ h1 {
   background-color: hsl(270, 27%, 6%);
 }
 
+.modal {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  /* z-index: 1001; */
+  background: rgb(56, 48, 48);
+  padding: 20px;
+  width: 50%;
+  height: 45%;
+  /* flex-direction: column-reverse; */
+  display: flex;
+    justify-content: center; /* Centers horizontally along the main axis */
+    align-items: center; 
+}
+
+.modal-wrapper {
+   display: flex;
+    flex-direction: column; /* Stacks children (p and button) one under the other */
+    align-items: center; /* Centers children horizontally within the wrapper */
+    /* Add styling for the actual modal box */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center; 
+    margin-bottom: 40px;
+}
+
 .gameOver{
   background-color: hsl(222, 27%, 30%);
   position: relative;
   width: 200px;
   height: 50px;
-  font-size: 75%;
-  cursor: pointer;
+  /* font-size: 75%; */
   border-radius: 8px;
   border: none;
   color: antiquewhite;
@@ -89,15 +106,19 @@ h1 {
 
 .newGame {
   background-color: hsl(222, 27%, 30%);
-  position: fixed;
-  width: 200px;
-  height: 50px;
-  font-size: 75%;
+  position: absolute;
+  width: 250px;
+  height: 70px;
+  /* font-size: 75%; */
   cursor: pointer;
   border-radius: 8px;
   border: none;
   color: antiquewhite;
-  font-size: 25px;
+  font-size: 30px;
+  padding-left: 80px;
+  display: flex;
+    flex-direction: column; /* Stacks children (p and button) one under the other */
+    align-items: center; 
 }
 
 
