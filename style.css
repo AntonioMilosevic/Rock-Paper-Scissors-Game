@@ -60,17 +60,26 @@ h1 {
   z-index: 1001;
   background: white;
   padding: 20px;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 50px; */
+  flex-direction: column;
 }
+
+
  
 
 .overlay {
   position: fixed;
   width: 100%;
   height: 100%;
-  display: none;
   justify-content: center;
   align-items: center;
-  background-color: hsl(270, 27%, 6%);
+  /* background-color: lab(32.49% 15.57 29.26); */
+  background-color: rgba (255, 0, 0, 0.8);
 }
 
 .modal {
@@ -102,10 +111,10 @@ h1 {
 
 .gameOver{
   background-color: hsl(222, 27%, 30%);
-  position: relative;
+  /* position: relative; */
   width: 200px;
   height: 50px;
-  /* font-size: 75%; */
+  cursor: pointer;
   border-radius: 8px;
   border: none;
   color: antiquewhite;
@@ -114,10 +123,9 @@ h1 {
 
 .newGame {
   background-color: hsl(222, 27%, 30%);
-  position: absolute;
-  width: 250px;
-  height: 70px;
-  /* font-size: 75%; */
+  /* position: fixed; */
+  width: 200px;
+  height: 50px;
   cursor: pointer;
   border-radius: 8px;
   border: none;
