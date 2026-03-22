@@ -50,19 +50,6 @@ const winningScore = 5;
 //   activePlayer = 0;
 //   playing = true;
 
-//   score0El.textContent = 0;
-//   score1El.textContent = 0;
-//   current0El.textContent = 0;
-//   current1El.textContent = 0;
-
-//   diceEl.classList.add('hidden');
-//   player0El.classList.remove('player--winner');
-//   player1El.classList.remove('player--winner');
-//   player0El.classList.add('player--active');
-//   player1El.classList.remove('player--active');
-// };
-// init();
-
 function updateScore() {
   playerDisplay.textContent = playerScore;
   compDisplay.textContent = computerScore;
@@ -72,20 +59,14 @@ function resetGame() {
   if (playerScore === winningScore) {
     displayMessage("Player wins the game!");
     playing = false;
+    openModal();
   }
   if (computerScore === winningScore) {
     displayMessage("Computer wins the game!");
     playing = false;
+    openModal();
   }
-
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
 }
-
-// let playerChoice = x
-// Trebace mi varijabla za izbor igraca i varijabla za izbor computera
-// Kada se pozovu funkcije getPlayerCh i getCompCh ovim var dodijeliti odgovarajucu vrijednost
-// I onda uporediti te 2 varijable
 
 function getPlayerChoice(e) {
   //  console.dir("ovo je getPlayerChoice", e.target);
@@ -135,7 +116,6 @@ const roundWinner = function () {
   console.log("Ovo je computer", computer);
 
   if (player === computer) {
-    // player === "rock" && computer === "rock";
     displayMessage(
       "It's a draw",
       `${player.charAt(0).toUpperCase() + player.slice(1)} 
@@ -166,8 +146,9 @@ const roundWinner = function () {
   updateScore();
   resetGame();
 };
+
 rockBtn.addEventListener("click", checkRound);
-//rockBtn.addEventListener("click", function () {
+
 // console.log("click");
 // });
 paperBtn.addEventListener("click", checkRound);

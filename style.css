@@ -118,7 +118,7 @@ h1 {
   border-radius: 8px;
   border: none;
   color: antiquewhite;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .newGame {
@@ -130,7 +130,7 @@ h1 {
   border-radius: 8px;
   border: none;
   color: antiquewhite;
-  font-size: 30px;
+  font-size: 20px;
   padding-left: 80px;
   display: flex;
     flex-direction: column; /* Stacks children (p and button) one under the other */
