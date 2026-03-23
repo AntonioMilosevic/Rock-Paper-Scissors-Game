@@ -1,11 +1,10 @@
-//1. select elements
 const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
-const newGameBtn = document.getElementsByClassName(".newGame");
 
-const modal = document.getElementsByClassName(".modal");
-const overlay = document.getElementsByClassName(".overlay");
+const newGameBtn = document.querySelector(".newGame");
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
 
 const emojis = document.getElementsByClassName(".emojis");
 
@@ -21,14 +20,6 @@ const displayMessage = function (result, message) {
   document.querySelector(".message-2").textContent = message;
 };
 
-const openModal = function () {
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-};
-// const displayMessage2 = function (message) {
-//   document.querySelector(".message-2").textContent = message;
-// };
-
 // let ako se vrijednost mijenja, const ako je konstantna
 
 let player;
@@ -36,6 +27,16 @@ let computer;
 let playerScore = 0;
 let computerScore = 0;
 let playing = true;
+
+const openModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
 
 const newGame = function () {
   playerScore = 0;
