@@ -42,6 +42,9 @@ const newGame = function () {
   playerScore = 0;
   computerScore = 0;
   playing = true;
+  closeModal();
+  updateScore();
+  displayMessage("Choose your weapon", "First to 5 points wins!");
 };
 
 const winningScore = 5;
@@ -149,7 +152,6 @@ const roundWinner = function () {
 };
 
 rockBtn.addEventListener("click", checkRound);
-
 // console.log("click");
 // });
 paperBtn.addEventListener("click", checkRound);
