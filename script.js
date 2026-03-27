@@ -44,7 +44,7 @@ const newGame = function () {
   playing = true;
   closeModal();
   updateScore();
-  displayMessage("Choose your weapon", "First to 5 points wins!"); 
+  displayMessage("Choose your weapon", "First to 5 points wins!");
 };
 
 const winningScore = 5;
