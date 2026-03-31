@@ -48,11 +48,6 @@ const newGame = function () {
 };
 
 const winningScore = 5;
-// const init = function () {
-//   scores = [0, 0];
-//   currentScore = 0;
-//   activePlayer = 0;
-//   playing = true;
 
 function updateScore() {
   playerDisplay.textContent = playerScore;
@@ -80,10 +75,6 @@ function getPlayerChoice(e) {
   const text = e.target.textContent;
   playerChoice.textContent = text;
   player = value;
-
-  //playerChoice.textContent = e.target.textContent;
-  // player = e.target.textContent;
-  // console.log(player);
 }
 
 //2. Define the computer's choice function
@@ -95,13 +86,7 @@ function getComputerChoice() {
   computer = compChoice.textContent;
   computerChoice.textContent = compChoiceEM;
   computer = compChoice;
-
-  // computerChoiceDisplay("click", getComputerChoice);
-  // console.log(getComputerChoice);
-  // return computerChoiceDisplay;
 }
-// function displayPlayerChoice (){
-// }
 
 function checkRound(e) {
   // console.log(e);
@@ -158,6 +143,4 @@ paperBtn.addEventListener("click", checkRound);
 scissorsBtn.addEventListener("click", checkRound);
 newGameBtn.addEventListener("click", newGame);
 
-//Trebace mi event listener za btn ('click', funkcija koja ce igru vratiti na pocetna podesavanja)
 
-// razlika izmedju func definition i expression
